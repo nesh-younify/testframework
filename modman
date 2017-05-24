@@ -1,2 +1,6 @@
 # DigitalPianism_TestFramework
-lib/DigitalPianism/TestFramework    lib/DigitalPianism/TestFramework
+
+# remove folder if exists
+@shell if [ -d $PROJECT/lib/DigitalPianism/TestFramework ]; then rm -rf $PROJECT/lib/DigitalPianism/TestFramework; fi
+# COPY instead of link as links will not work if used with modman
+@shell cp -rf $MODULE/lib/DigitalPianism/TestFramework $PROJECT/lib/DigitalPianism/TestFramework
